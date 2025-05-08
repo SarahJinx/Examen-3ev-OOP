@@ -8,18 +8,25 @@ namespace Examen_3v
 {
     internal class SpriteRenderer : Component
     {
-        private char sprite;
-        private ConsoleColor color;
-        public SpriteRenderer(char sprite, ConsoleColor color)
+        private SpriteRenderer sprite;
+        private object color;
+
+        public SpriteRenderer(char sprRend, ConsoleColor color)
         {
             this.sprite = sprite;
             this.color = color;
         }
+
+        public override void Start()
+        {
+            Console.WriteLine(sprite);
+        }
+
         public override void Update()
         {
-            Console.ForegroundColor = color;
+            Console.BackgroundColor = (ConsoleColor)color;
             Console.Write(sprite);
-            Console.ForegroundColor = ConsoleColor.Black;
+            Console.BackgroundColor = ConsoleColor.Black;
         }
     }
 }

@@ -8,7 +8,7 @@ namespace Examen_3v
 {
     internal class BeepBehaviour : Component
     {
-        public int freq;
+        private int freq;
         private int dur;
         public BeepBehaviour(int freq, int dur)
         {
