@@ -32,7 +32,7 @@
             // Start scene
             foreach (Game_Object go in gameObjs) 
             { 
-                go.Start(); 
+                go.Start();
             }
             bool exit = false;
             while (!exit)
@@ -41,11 +41,16 @@
                 { 
                     go.Update(); 
                 }
+                Console.WriteLine("X to exit");
                 char c = (char)Console.Read();
                 if (c == 'X')
                 {
                     exit = true;
                 }
+            }
+            if (exit)
+            {
+                Environment.Exit(0);
             }
         }
     }
